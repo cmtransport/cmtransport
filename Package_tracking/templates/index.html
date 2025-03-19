@@ -1,0 +1,540 @@
+
+{% extends 'layout.html' %}
+{% block content %}
+{% load static %}
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="{% static 'assets/img/world-dotted-map.png' %}" alt="" class="hero-bg" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row gy-4 d-flex justify-content-between">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Every shipment to its destination non-stop, on time and safely to meet your critical shipment needs.</p>
+
+            <!-- {% if package %}
+        <div class="alert alert-info" role="alert">
+            <div class="alert-brand">
+              <img class="text-center" src="{% static 'assets/img/features-1.jpg' %}" alt="" width="100%">
+            </div>
+            <h4 class="alert-heading py-2 my-2">Tracking ID: {{ package.tracking_id }}</h4>
+            <p>Receiver: {{ package.receiver_name }}</p>
+            <p>Status: <strong>{{ package.get_status_display }}</strong></p>
+            <hr>
+            <p class="mb-0">Last updated: {{ package.updated_at }}</p>
+        </div>
+        {% endif %} -->
+        
+    
+
+            <!-- <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
+              {% csrf_token %}
+              {{ form }}
+              <button type="submit" class="btn btn-primary">Track Package</button>
+            </form> -->
+
+            <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
+
+              <div class="col-lg-3 col-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="0" class="purecounter">632</span>
+                  <p>Clients</p>
+                </div>
+              </div><!-- End Stats Item -->
+
+              <div class="col-lg-3 col-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="0" class="purecounter">521</span>
+                  <p>Projects</p>
+                </div>
+              </div><!-- End Stats Item -->
+
+              <div class="col-lg-3 col-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="0" class="purecounter">1453</span>
+                  <p>Support</p>
+                </div>
+              </div><!-- End Stats Item -->
+
+              <div class="col-lg-3 col-6">
+                <div class="stats-item text-center w-100 h-100">
+                  <span data-purecounter-start="0" data-purecounter-end="72" data-purecounter-duration="0" class="purecounter">72</span>
+                  <p>Workers</p>
+                </div>
+              </div><!-- End Stats Item -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <img src="{% static 'assets/img/hero-img.svg' %}" class="img-fluid mb-3 mb-lg-0" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
+            <div>
+              <h4 class="title">EXPEDITED SHIPMENT SERVICES</h4>
+              <p class="description">Expedited shipping is the process of transporting goods through specialized means faster than what could be accomplished with standard shipping. It often comes with guaranteed delivery requirements the consumer expects the seller to meet.</p>
+              <a href="{% url 'expeditedshipment'%}" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
+            <div>
+              <h4 class="title">AIR CHARTER SERVICES</h4>
+              <p class="description">Air charter service is another name for air freight. It involves the transportation of goods by way of a cargo plane. It is a useful shipping method for oversized, potentially hazardous, or valuable items. Air charter handles about 35% of global trade by value every year. Transporting goods by cargo plane is also beneficial during seasonal peaks and when urgent delivery is needed.</p>
+              <a href="{% url 'AIRCHARTERSERVICES'%}" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
+            <div>
+              <h4 class="title">3PL MANAGEMENT</h4>
+              <p class="description">3PL management refers to the outsourcing of order fulfillment or e-commerce logistics processes to a third-party company. With the necessary tools and infrastructure already set in place, 3PL providers allow businesses to accomplish more.</p>
+              <a href="{% url 'PMANAGEMENT'%}" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Services Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+          </div>
+
+          <div class="col-lg-6 content order-last  order-lg-first" data-aos="fade-up" data-aos-delay="100">
+            <h3>About Us</h3>
+            <p>
+              When it comes to the transportation of your goods and materials, you can’t afford to trust just anyone. You need to be assured your items will arrive at their destination in the promised timeframe and condition. Our logistics company, headquartered in Painesville, Ohio, and serving nationwide, is dedicated to providing clients with premium white glove service and immediate, same-day door-to-door expedited services, 24 hours a day, 365 days per year.
+              <br>
+
+              At C&M Transport, our team of professionals offers superior transportation services to customers nationwide, and we pride ourselves on the great reputation we’ve built. At the same time, we continuously look to improve our operation. Learn more about the services C&M Transport offers clients and what makes our organization stand out.
+            </p>
+            <ul>
+              <li>
+                <i class="bi bi-diagram-3"></i>
+                <div>
+                  <h5>Specialized Equipment</h5>
+                  <p>Because we work with a wide range of clients from various industries, we deliver all different types of cargo. Our specialized equipment services are intended to properly handle the variety of freight to ensure it reaches its destination safely. In addition, C&M Transport uses multiple types of equipment, such as sprinter vans, large straight trucks, and tractor-trailers up to 53 feet. All straight trucks and tractor-trailers are air-ride equipped.</p>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-fullscreen-exit"></i>
+                <div>
+                  <h5>Full Truckload</h5>
+                  <p>Clients seeking a more cost-effective shipping option should consider the full truckload services from C&M Transport. This advanced shipping method involves one truck responsible for a single client’s shipment of goods from one point to another. C&M Transport offers clients door-to-door single and team transit for all truckload services to better serve a customer’s needs.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Our Services<br></span>
+        <h2>Our ServiceS</h2>
+        <p>With a dedication to prompt communication, efficient customer service efforts, and quality shipping expectations, companies can feel confident in the following services of C&M Transport.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'assets/img/service-1.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Storage</h3>
+              <p>We help to reduce overstocking and understocking, leading to lower storage costs and fewer lost sales. The efficiency gained from accurate inventory management directly translates to improved customer satisfaction and a healthier bottom line.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'assets/img/service-2.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Logistics</h3>
+              <p>We offers you peace of mind and keeps your partners and customers informed about the status of their shipments. Also, it builds trust between the supplier and the purchaser.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'assets/img/service-3.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Cargo</h3>
+              <p>we enhances supply chain visibility. In an era where global supply chains span vast distances and involve multiple stakeholders, knowing the precise location of goods is crucial for effective management.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'assets/img/service-4.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Trucking</h3>
+              <p> We helps companies to keep their customers informed about the status of their shipments. Customers can access real-time information about their shipments, reducing the risk of delayed or lost deliveries and improving their overall experience.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'assets/img/service-5.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Packaging</h3>
+              <p>we are critical for product safety, preventing counterfeiting and achieving supply chain transparency. These companies are making names for themselves in the sphere of traceability and serialization.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'assets/img/service-6.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Warehousing</h3>
+              <p>These systems enable the tracking of inventory as it moves within and between warehouses, ensuring that stock levels are accurate and up-to-date. This visibility is critical in making informed decisions about restocking, reducing the risk of stockouts, or overstock situations.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+      <img src="{% static 'assets/img/cta-bg.jpg' %}" alt="">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>SHIPPING SERVICES AT C&M TRANSPORT
+              </h3>
+              <p>Our commitment to business owners for efficient, reliable shipping services has given us an exceptional reputation in the logistics industry. This is what sets us apart from other freight companies. We are headquartered in Cleveland, OH, and provide 17 locations across the country.
+                To learn more about the C&M Transport trucking company, contact us today.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Features</span>
+        <h2>Features</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <img src="{% static 'assets/img/features-1.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+            <h3>WHAT MAKES OUR LOGISTICS COMPANY UNIQUE</h3>
+            <p class="fst-italic">
+              Besides premium offerings and top-quality service, C&M Transport stands out in other ways. Our Ohio-based company was founded in 1991 and is run by people who started as road drivers. Our roots provide us with a deep understanding of how the industry works and allow us to tailor our operation to better meet your needs.
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i><span> Because we know what life on the road is like, constant communication between our drivers, dispatch, and customers is of the utmost importance to us. Furthermore, as we specialize in white glove services, we also offer inside delivery and rigging crews upon request.</span></li>
+            </ul>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{% static 'assets/img/features-2.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+            <h3>TRUST C&M TRANSPORT WITH YOUR SHIPPING NEEDS</h3>
+            <p class="fst-italic">
+              At C&M Transport, we are proud of our reputation of being a quality provider of expedited transportation since 1991. Whether you need long haul or short haul services or assistance with oversized loads, our team possesses the knowledge and expertise to efficiently handle all your order fulfillment needs.
+            </p>
+            <p>
+              Although our headquarters are in Painesville, OH, we have 17 additional locations throughout the country, expanding our enterprises nationally and into Canada. For more information about our logistics company and the ways our services can benefit you, please contact us today at C&M Transport.
+            </p>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+            <img src="{% static 'assets/img/features-3.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up">
+            <h3>EXPEDITED SERVICES</p>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>In some cases, standard shipping just won’t cut it. There are several reasons products and other items often need to be delivered faster than normal. Our expedited services minimize the time between purchasing and receiving an item, all while ensuring products arrive in the right condition.</span></li>
+              <li><i class="bi bi-check"></i><span> With our extensive network in place, customers can enjoy the luxury of monitoring their expedited shipment by way of our advanced tracking system. Stay informed with crucial shipping information such as the current location of your shipment, information about arrivals and departures from shipment centers, and approximate arrival times.</span></li>
+              <li><i class="bi bi-check"></i> <span>Generally, packages in transit experience multiple stops along the way to their destination. The expedited shipping services at C&M Transport reduce the number of these stops, greatly speeding up the delivery process. Additionally, with fewer touchpoints, clients can expect less likelihood of delays. The result is an enhanced customer experience for all parties involved.</span>.</li>
+            </ul>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+            <img src="{% static 'assets/img/features-4.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+            <h3>AIR CHARTER SERVICES</h3>
+            <p class="fst-italic">
+              Depending on the type of freight and where it’s headed, ground transport can be a challenge. In these instances, alternative shipping methods are required. With access to dedicated cargo planes, C&M Transport is pleased to offer clients air charter services.
+              <br>
+              Using our 3PL logistics expertise, our team coordinates all facets of the air charter transportation process. Our air charter services involve:
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>Delivering the cargo to the airport in a safe and timely fashion</span></li>
+              <li><i class="bi bi-check"></i><span> Inspecting the cargo before it’s loaded to ensure items are still in their original conditions</span></li>
+              <li><i class="bi bi-check"></i> <span>Overseeing the loading process, making certain all cargo is properly secured</span>.</li>
+              <li><i class="bi bi-check"></i> <span>Arriving at the corresponding airport before planes touch down</span>.</li>
+              <li><i class="bi bi-check"></i> <span>Verifying the cargo is correct and unloaded safely from the planes onto our vehicles</span>.</li>
+              <li><i class="bi bi-check"></i> <span>Safely delivering the freight to the correct location on time</span>.</li>
+            </ul>
+          </div>
+        </div><!-- Features Item -->
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Pricing Section -->
+  
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section dark-background">
+
+      <img src="{% static 'assets/img/testimonials-bg.jpg' %}" class="testimonials-bg" alt="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span></span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span></span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span></span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span></span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span></span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Frequently Asked Questions</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Frequent questions are been asked about tracking such as</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What is the main purpose of tracking?</h3>
+                <div class="faq-content">
+                  <p>A tracking system, also known as a locating system, is used for the observing of persons or objects on the move and supplying a timely ordered sequence of location data for further processing.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>How does tracking systems work?</h3>
+                <div class="faq-content">
+                  <p>The GPS tracker determine where the device is located and roughly estimate the distance between the cellphone towers by interpolating signals between adjacent towers. A precision of down to 100 meters may be obtained in urban areas where mobile traffic and density of cellphone towers is sufficiently high.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What is the benefit of tracking?</h3>
+                <div class="faq-content">
+                  <p>Automated time tracking can be utilized by individuals or companies to seamlessly keep track of the working day and tasks. The benefits of time tracking include increased productivity, reduced time wasters, better focus and an improved work life balance.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What is the function of tracking?</h3>
+                <div class="faq-content">
+                  <p>A tracking function refers to the capability of a radar system to continuously monitor a target over a specific time interval, ensuring accurate range and angular measurements for effective tracking.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>What is the purpose of tracking?</h3>
+                <div class="faq-content">
+                  <p>Process Tracking is a combination of procedures and tasks to monitor a given process for compliance with initial requirements for the purpose of controlling performance and ensuring that the process moves towards a desired outcome.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+  </main>
+{% endblock %}
