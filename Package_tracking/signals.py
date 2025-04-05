@@ -14,7 +14,7 @@ def send_package_notification(sender, instance, created, **kwargs):
     send_mail(
         subject,
         message,
-        'boogsboogie025@gmail.com.com',
+        'boogsboogie025@gmail.com',
         [instance.receiver_email],
         fail_silently=False,
     )
